@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "thin";
+    src: url(./Roboto-Thin.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: #2B2E4A;
+    display: grid;
+    height: 100vh;
+    grid-auto-flow: row;
+    grid-template-rows: 1fr 7fr;
+}
+
+
+
+.header {
+    border-bottom: rgba(233, 233, 233,0.2) 3px solid;
+    color: red;
+    display: grid;
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-size: 2rem;
+    align-items: center;
+    grid-auto-flow: column;
+    padding-right: 200px;
+}
+
+.restart {
+    height: 70px;
+    width: 70px;
+    border: red 2px solid;
+    border-radius: 50%;
+    display: grid;
+    cursor: pointer;
+    transition: border 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.mysvg {
+    fill: red;
+    justify-self: center;
+    align-self: center;
+    transform: scale(0.8);
+    transition: fill 0.3s ease ;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+    
+}
+
+.restart:hover .mysvg {
+    fill: #2B2E4A;
+    border-radius: 50%;
+    
+}
+
+.restart:hover {
+    background-color: red;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.player {
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    font-size: 5rem;
+    color: red;
+    z-index: 1;
+    display: grid;
+}
+
+.xr {
+    position: absolute;
+    border: rgba(233, 233, 233,0.2) 3px solid;
+    transform: skewY(-45deg);
+    width:20rem;
+    z-index: 0;
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.xl {
+    position: absolute;
+    border: rgba(233, 233, 233,0.2) 3px solid;
+    transform: skewY(45deg);
+    width:20rem;
+    z-index: 0;
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.o {
+    position: absolute;
+    border: rgba(233, 233, 233,0.2) 3px solid;
+    border-radius: 50%;
+    width:20rem;
+    height: 20rem;
+    z-index: 0;
+    justify-self: center;
+    align-self: center;
+}
+
+.game {
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.score {
+    color: red;
+    font-size: 2.5rem;
+    align-self: self-end;
+    justify-self: center;
+
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.square {
+    height: 150px;
+    width: 150px;
+    font-size: 7rem;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b1 {
+    border-bottom: 5px red solid;
+    border-right: 5px red solid;
+}
+
+.b2 {
+    border-bottom: 5px red solid;
+    border-right: 5px red solid;
+
+}
+
+.b3 {
+    border-bottom: 5px red solid;
+}
+
+.b4 {
+    border-bottom: 5px red solid;
+    border-right: 5px red solid;
+}
+
+.b5 {
+    border-bottom: 5px red solid;
+    border-right: 5px red solid;
+}
+
+.b6 {
+    border-bottom: 5px red solid;
+}
+
+.b7 {
+    border-right: 5px red solid;
+}
+
+.b8 {
+    border-right: 5px red solid;
+}
+
+.turn {
+    border: 2px red solid;
+    height: 50px;
+    width: 150px;
+    justify-self: center;
+    align-self: self-start;
+    border-radius: 50px;
+    display: grid;
+    align-items: center;
+}
+
+.p1 {
+    color: #2B2E4A;
+    height: 45px; 
+    background-color: red;
+    width: 65%;
+    border-radius: 50px;
+    margin-left: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p2 {
+    color: #2B2E4A;
+    height: 45px; 
+    background-color: red;
+    width: 65%;
+    border-radius: 50px;
+    margin-right: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: self-end;
+}
