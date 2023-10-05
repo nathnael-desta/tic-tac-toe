@@ -117,6 +117,7 @@ body {
     grid-template-rows: 1fr 6fr 1fr;
     justify-content: center;
     align-items: center;
+    position: relative;
     
 }
 
@@ -125,6 +126,7 @@ body {
     font-size: 2.5rem;
     align-self: self-end;
     justify-self: center;
+    z-index: 1;
 
 }
 
@@ -132,6 +134,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    z-index: 1;
+    position: relative;
 }
 
 .square {
@@ -142,42 +146,46 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.b0 {
+    border-bottom: 5px red solid;
+    border-right: 5px red solid;
 }
 
 .b1 {
     border-bottom: 5px red solid;
     border-right: 5px red solid;
+
 }
 
 .b2 {
     border-bottom: 5px red solid;
-    border-right: 5px red solid;
-
 }
 
 .b3 {
     border-bottom: 5px red solid;
+    border-right: 5px red solid;
 }
 
 .b4 {
     border-bottom: 5px red solid;
     border-right: 5px red solid;
+    position: relative;
+    display: grid;
+    z-index: 1;
 }
 
 .b5 {
     border-bottom: 5px red solid;
-    border-right: 5px red solid;
 }
 
 .b6 {
-    border-bottom: 5px red solid;
-}
-
-.b7 {
     border-right: 5px red solid;
 }
 
-.b8 {
+.b7 {
     border-right: 5px red solid;
 }
 
@@ -190,15 +198,16 @@ body {
     border-radius: 50px;
     display: grid;
     align-items: center;
+    z-index: 1;
 }
 
 .p1 {
     color: #2B2E4A;
-    height: 45px; 
+    height: 44px; 
     background-color: red;
     width: 65%;
     border-radius: 50px;
-    margin-left: 3px;
+    margin-left: 0.05rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,13 +215,138 @@ body {
 
 .p2 {
     color: #2B2E4A;
-    height: 45px; 
+    height: 44px; 
     background-color: red;
     width: 65%;
     border-radius: 50px;
-    margin-right: 3px;
+    margin-right: 0.05rem;
     display: flex;
     justify-content: center;
     align-items: center;
     justify-self: self-end;
+}
+
+
+
+.text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.won {
+    z-index: 0;
+}
+
+.end::after {
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: var(--after-content);;
+    font-size: 3rem;
+    padding: 30px;
+    background-color: red;
+    color: #2B2E4A;
+    border-radius: 20px;
+    transition: border 0.3s ease;
+    transition: background-color 0.3s ease;
+
+}
+
+.firstVertical::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15.66%;
+    bottom: 0;
+    width: 4px;
+    background-color: red;
+
+}
+
+.secondVertical::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 49%;
+    bottom: 0;
+    width: 4px;
+    background-color: red;
+
+}
+
+.thirdVertical::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 82.33%;
+    bottom: 0;
+    width: 4px;
+    background-color: red;
+
+}
+
+.firstHorizontal::before {
+    content: '';
+    position: absolute;
+    top: 15.66%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: red;
+
+}
+
+.secondHorizontal::before {
+    content: '';
+    position: absolute;
+    top: 49%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: red;
+
+}
+
+.thirdHorizontal::before {
+    content: '';
+    position: absolute;
+    top: 82.33%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: red;
+
+}
+
+
+.crossr::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 141%;
+    height: 4px;
+    background-color: red;
+    transform-origin: 0 0;
+  transform: rotate(45deg);
+}
+
+.crossl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 141%;
+    height: 4px;
+    background-color: red;
+    transform-origin: 100% 0;
+  transform: rotate(-45deg);
 }
